@@ -26,6 +26,7 @@ export const Banner = styled.div`
   @media (min-width: 768px) {
     min-height: 30vh;
     padding: 40px;
+    line-height: 3;
   }
 `
 export const BannerBetween = styled.div`
@@ -44,12 +45,14 @@ export const BannerCloseButton = styled.button`
 export const BannerPara = styled.p`
   color: black;
 `
-export const BannerExplore = styled.p`
-  background-color: transparent;
-  border: 1px solid black;
-  color: black;
+export const BannerButton = styled.button`
   align-self: flex-start;
-  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+  color: black;
 `
 export const RightContent = styled.div`
   padding: 10px;
