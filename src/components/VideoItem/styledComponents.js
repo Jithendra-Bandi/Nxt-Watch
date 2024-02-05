@@ -80,5 +80,6 @@ export const ConditionalRow2 = styled.div`
   @media (max-width: 575px) {
     font-size: 12px;
     display: flex;
+    align-items: center;
   }
 `

@@ -55,7 +55,7 @@ class Home extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    if (!response.ok) {
+    if (response.ok) {
       const list = data.videos.map(each => ({
         id: each.id,
         title: each.title,
@@ -163,18 +163,10 @@ class Home extends Component {
           const bannerDisplay = () => (
             <Banner data-testid="banner">
               <BannerBetween>
-                {isDark && (
-                  <Logo
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
-                    alt="nxt watch logo"
-                  />
-                )}
-                {!isDark && (
-                  <Logo
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                    alt="nxt watch logo"
-                  />
-                )}
+                <Logo
+                  src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                  alt="nxt watch logo"
+                />
                 <BannerCloseButton
                   data-testid="close"
                   type="button"
